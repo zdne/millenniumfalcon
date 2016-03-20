@@ -1,91 +1,99 @@
 # Millennium Falcon
 
 ## Properties
-- crew (array[Person])
-- passengers (array[Person])
-- cargo
-- escape_crafts (array[Escape Craft])
-- armament
-- engine
-- hyperdrive
-- communication_systems
-- hatches
+- `crew` (array[[Person][]])
+- `passengers` (array[[Person][]])
+- `cargo`
+- `escape_crafts` (array[[Escape Craft][]])
+- `armament`
+- `engine`
+- `hyperdrive`
+- `communication_systems`
+- `hatches`
+- `shields`
+
+[Person]: #person
+[Escape Craft]: #escape-craft
 
 ## Affordances
-- takeOff
+- `takeOff`
 	- Conditions
-		- crew > 2
+		- `crew` > 2
 
-- land
-- enterHyperspace
-- leaveHyperspace
-- setControl
+- `land`
+- `enterHyperspace`
+- `leaveHyperspace`
+- `setControl`
 	- Parameters
- 		- pitch
-		- roll
-		- yaw
+		- `pitch`
+		- `roll`
+		- `yaw`
 
-- setThrust
+- `setThrust`
 	- Parameters
-		- thrust
+		- `thrust`
 
-- embark
+- `embark`
 	- Parameters
-		- person (Person)
-		- role (enum)
-			- crew
-			- passenger
+		- `person` ([Person][])
+		- `role` (enum)
+			- `crew`
+			- `passenger`
 
-- disembark
+- `disembark`
 	- Parameters
-		- person (Person)
+		- `person` ([Person][])
 
 ## States
-- landed (entry)
-	- takeOff -> airborne
-	- addCrewMember -> landed
-	- removeCrewMember -> landed
+- `landed` (entry)
+	- `takeOff` -> `airborne`
+	- `addCrewMember` -> `landed`
+	- `removeCrewMember` -> `landed`
 
-- airborne
-	- land -> landed
-	- enterHyperspace -> hyperspaceborne
-	- setControl -> airborne
-	- setThrust -> airborne
+- `airborne`
+	- `land` -> `landed`
+	- `enterHyperspace` -> `hyperspaceborne`
+	- `setControl` -> `airborne`
+	- `setThrust` -> `airborne`
 
-- hyperspaceborne
-	- leaveHyperspace -> airborne
+- `hyperspaceborne`
+	- `leaveHyperspace` -> `airborne`
 
 # Person
 ## Properties
-- name
-
+- `name`
 
 # Universe
 Everything in the Star Wars universe.
 
 ## Properties
-- people (array[person])
-- space_crafts (array)
+- `people` (array[[Person][]])
+- `space_crafts` (array)
 
 ## Affordances
-- createPerson
-- removePerson
+- `createPerson`
+	- Parameters
+		- `person` ([Person][])
+
+- `removePerson`
+	- Parameters
+		- `person` ([Person][])
 
 # Escape Craft
-Model CEC Class-1
+Model CEC Class-1 escape craft.
 
 ## Properties
-- crew
-- passengers
-- host
+- `crew` (array[[Person][]])
+- `passengers` (array[[Person][]])
+- `host`
 
 ## Affordances
-- launch
-- land
+- `launch`
+- `land`
 
 ## States
-- docked (entry)
-	- launch -> airborne
+- `docked` (entry)
+	- `launch` -> `airborne`
 
-- airborne
-	- land -> (end)
+- `airborne`
+	- `land` -> (end)
