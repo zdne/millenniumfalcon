@@ -3,7 +3,6 @@
 ## Properties
 - `crew` (array[[Person][]])
 - `passengers` (array[[Person][]])
-- `cargo`
 - `escape_crafts` (array[[Escape Craft][]])
 - `armament`
 - `engine`
@@ -11,9 +10,7 @@
 - `communication_systems`
 - `hatches`
 - `shields`
-
-[Person]: #person
-[Escape Craft]: #escape-craft
+- `cargo`
 
 ## Affordances
 - `takeOff`
@@ -97,3 +94,8 @@ Model CEC Class-1 escape craft.
 
 - `airborne`
 	- `land` -> (end)
+
+---
+
+[Person]: #person
+[Escape Craft]: #escape-craft
