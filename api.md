@@ -1,4 +1,4 @@
-# Millennium Falcon
+# Millennium Falcon ([Spacecraft][])
 
 ## Properties
 - `crew` (array[[Person][]])
@@ -76,7 +76,7 @@ Everything in the Star Wars universe.
 	- Parameters
 		- `person` ([Person][])
 
-# Escape Craft
+# Escape Craft ([Spacecraft][])
 Model CEC Class-1 escape craft.
 
 ## Properties
@@ -95,7 +95,12 @@ Model CEC Class-1 escape craft.
 - `airborne`
 	- `land` -> (end)
 
+# Spacecraft
+The abstract base class for any spacecraft.
+
 ---
 
 [Person]: #person
 [Escape Craft]: #escape-craft
+
+[Escape Craft]
