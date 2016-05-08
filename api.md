@@ -102,5 +102,4 @@ The abstract base class for any spacecraft.
 
 [Person]: #person
 [Escape Craft]: #escape-craft
-
-[Escape Craft]
+[Spacecraft]: #spacecraft
